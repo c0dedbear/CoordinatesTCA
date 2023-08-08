@@ -1,0 +1,38 @@
+{
+  "configurations" : [
+    {
+      "id" : "7DC43168-5E4B-4AF2-A1EF-22E9CE06428F",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "APIClientTests",
+        "name" : "APIClientTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "ChartTests",
+        "name" : "ChartTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "InputTests",
+        "name" : "InputTests"
+      }
+    }
+  ],
+  "version" : 1
+}

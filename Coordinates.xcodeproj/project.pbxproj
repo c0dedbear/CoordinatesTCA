@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B01A368F2A7E521000B214E4 /* Chart in Frameworks */ = {isa = PBXBuildFile; productRef = B01A368E2A7E521000B214E4 /* Chart */; };
 		B01CA2C32A7E470400F477EA /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01CA2C22A7E470400F477EA /* App.swift */; };
 		B01CA2C72A7E470400F477EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01CA2C62A7E470400F477EA /* Assets.xcassets */; };
 		B0BED3842A8101FF003821D4 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BED3832A8101FF003821D4 /* AppReducer.swift */; };
@@ -20,6 +19,7 @@
 		B01CA2C22A7E470400F477EA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B01CA2C62A7E470400F477EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01CA2D02A7E478F00F477EA /* coordinates-modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "coordinates-modules"; sourceTree = "<group>"; };
+		B0562B712A825B5B00EE5BAD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		B0BED3832A8101FF003821D4 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -29,7 +29,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0BED3862A810265003821D4 /* Input in Frameworks */,
-				B01A368F2A7E521000B214E4 /* Chart in Frameworks */,
 				B0BED3882A810831003821D4 /* APIClientLive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +46,7 @@
 		B01CA2B62A7E470400F477EA = {
 			isa = PBXGroup;
 			children = (
+				B0562B712A825B5B00EE5BAD /* TestPlan.xctestplan */,
 				B01CA2D02A7E478F00F477EA /* coordinates-modules */,
 				B01CA2C12A7E470400F477EA /* App */,
 				B01CA2C02A7E470400F477EA /* Products */,
@@ -90,7 +90,6 @@
 			);
 			name = Coordinates;
 			packageProductDependencies = (
-				B01A368E2A7E521000B214E4 /* Chart */,
 				B0BED3852A810265003821D4 /* Input */,
 				B0BED3872A810831003821D4 /* APIClientLive */,
 			);
@@ -381,10 +380,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B01A368E2A7E521000B214E4 /* Chart */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Chart;
-		};
 		B0BED3852A810265003821D4 /* Input */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Input;

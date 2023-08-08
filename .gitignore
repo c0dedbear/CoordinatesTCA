@@ -4,8 +4,12 @@
 .AppleDouble
 .LSOverride
 /.build
-xcuserdata/
 *.build
+
+## User settings
+xcuserdata/
+**/xcuserdata/*
+*.xcuserdata*
 
 # Thumbnails
 ._*

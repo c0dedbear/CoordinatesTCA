@@ -59,7 +59,7 @@ let package = Package(
             ]),
         .testTarget(
             name: "InputTests",
-            dependencies: ["Input"]),
+            dependencies: ["Input", "APIClient"]),
         .target(
             name: "APIClient",
             dependencies: [
