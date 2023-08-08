@@ -1,7 +1,7 @@
 {
   "configurations" : [
     {
-      "id" : "7DC43168-5E4B-4AF2-A1EF-22E9CE06428F",
+      "id" : "F2F92D08-C904-4798-89AA-E3F00CFFBE6B",
       "name" : "Configuration 1",
       "options" : {
 
@@ -9,26 +9,27 @@
     }
   ],
   "defaultOptions" : {
+    "language" : "ru",
     "testTimeoutsEnabled" : true
   },
   "testTargets" : [
     {
       "target" : {
-        "containerPath" : "container:",
+        "containerPath" : "container:coordinates-modules",
         "identifier" : "APIClientTests",
         "name" : "APIClientTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:",
+        "containerPath" : "container:coordinates-modules",
         "identifier" : "ChartTests",
         "name" : "ChartTests"
       }
     },
     {
       "target" : {
-        "containerPath" : "container:",
+        "containerPath" : "container:coordinates-modules",
         "identifier" : "InputTests",
         "name" : "InputTests"
       }

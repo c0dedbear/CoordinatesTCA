@@ -19,7 +19,7 @@
 		B01CA2C22A7E470400F477EA /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		B01CA2C62A7E470400F477EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01CA2D02A7E478F00F477EA /* coordinates-modules */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "coordinates-modules"; sourceTree = "<group>"; };
-		B0562B712A825B5B00EE5BAD /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
+		B087E7532A827EEE00CE75EA /* TestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = TestPlan.xctestplan; sourceTree = "<group>"; };
 		B0BED3832A8101FF003821D4 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,7 +46,7 @@
 		B01CA2B62A7E470400F477EA = {
 			isa = PBXGroup;
 			children = (
-				B0562B712A825B5B00EE5BAD /* TestPlan.xctestplan */,
+				B087E7532A827EEE00CE75EA /* TestPlan.xctestplan */,
 				B01CA2D02A7E478F00F477EA /* coordinates-modules */,
 				B01CA2C12A7E470400F477EA /* App */,
 				B01CA2C02A7E470400F477EA /* Products */,
@@ -298,7 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 4Y7AWMPVGY;
+				DEVELOPMENT_TEAM = 86JPYCW6CS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
@@ -331,7 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "";
-				DEVELOPMENT_TEAM = 4Y7AWMPVGY;
+				DEVELOPMENT_TEAM = 86JPYCW6CS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";

@@ -57,8 +57,9 @@ public struct InputFeature: Reducer {
                 break
             case .keyboardDoneButtonTapped:
                 state.focusedField = nil
-            case .binding:
                 state.buttonState = .ready
+            case .binding:
+                return .none
             case .letsGoButtonTapped:
                 guard let count = getValidCount(state.text) else {
                     state.buttonState = .error("Введите номер от 1 до 1000")
