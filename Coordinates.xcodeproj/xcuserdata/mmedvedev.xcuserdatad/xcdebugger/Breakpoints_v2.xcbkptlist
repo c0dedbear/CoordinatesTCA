@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "67B0500C-9622-4A83-81A1-37A17884A311"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8DA81ED1-00F6-4410-8C8C-009E06D6B245"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "App/AppFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getPoints(count:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - 9b25c213a3feefa1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1276">
+               </Location>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - 80cfa75175cfaba3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1568">
+               </Location>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - bc63753012b709a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "284">
+               </Location>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - 80cfa75175cfab84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "928">
+               </Location>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - 80cfa75175cfab84"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "920">
+               </Location>
+               <Location
+                  uuid = "6FE78D2E-CB92-4EB1-9480-3C04FB9FDBE3 - 80cfa75175cfabc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for static APIClient.APIClient.getPoints@Sendable (count: Swift.Int) async throws -&gt; Swift.Array&lt;Models.Point&gt;"
+                  moduleName = "Coordinates"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mmedvedev/Developer/Coordinates/coordinates-modules/Sources/APIClientLive/APIClientLive.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "760">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A9097728-CC21-4F54-881A-3D60BA8FC39E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "coordinates-modules/Sources/Chart/ChartFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "yScaleRange"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "684672C0-34DA-45AF-9B30-E99834DA067F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "coordinates-modules/Sources/Chart/ChartFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "xScaleRange"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "015142F4-2D4D-4FBF-A832-83EB2F932FF7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "coordinates-modules/Sources/Chart/ChartFeature.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "renderAndExportPDF(content:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
