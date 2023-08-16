@@ -11,6 +11,7 @@ public struct ChartView: View {
     private let lineWidth: Double = 1.2
     private let chartColor: Color = .blue
     private let tipHoverColor: Color = .red
+    @State private var selectedPoint: Point?
 
     private let store: StoreOf<ChartFeature>
 
@@ -25,7 +26,7 @@ public struct ChartView: View {
                     let baselineMarker = makeLineMark(for: point,
                                                       showSymbols: viewStore.isDotsShown,
                                                       isSmooth: viewStore.isSmoothLines)
-                    if viewStore.selectedElement == point && viewStore.isDotsShown {
+                    if selectedPoint == point && viewStore.isDotsShown {
                         baselineMarker.symbol {
                             Circle()
                                 .strokeBorder(chartColor, lineWidth: lineWidth)
@@ -42,15 +43,15 @@ public struct ChartView: View {
             }
             .chartYScale(domain: viewStore.yScaleRange)
             .chartXScale(domain: viewStore.xScaleRange)
-            .chartOverlay { chartOverlay($0, viewStore: viewStore) }
-            .chartBackground { chartBackground($0, viewStore: viewStore) }
+            .chartOverlay { chartOverlay($0, points: viewStore.points) }
+            .chartBackground { chartBackground($0, isDotsShown: viewStore.isDotsShown) }
         }
     }
 
-    private func chartBackground(_ proxy: ChartProxy, viewStore: ViewStoreOf<ChartFeature>) -> some View {
+    private func chartBackground(_ proxy: ChartProxy, isDotsShown: Bool) -> some View {
         ZStack(alignment: .topLeading) {
             GeometryReader { geo in
-                if let selectedElement = viewStore.selectedElement, viewStore.isDotsShown {
+                if let selectedElement = selectedPoint, isDotsShown {
                     let startPositionX1 = proxy.position(forX: selectedElement.x) ?? 0
 
                     let lineX = startPositionX1 + geo[proxy.plotAreaFrame].origin.x
@@ -83,7 +84,7 @@ public struct ChartView: View {
         }
     }
 
-    private func chartOverlay(_ proxy: ChartProxy, viewStore: ViewStoreOf<ChartFeature>) -> some View {
+    private func chartOverlay(_ proxy: ChartProxy, points: [Point]) -> some View {
         GeometryReader { geo in
             Rectangle()
                 .fill(.clear)
@@ -91,20 +92,12 @@ public struct ChartView: View {
                 .gesture(
                     SpatialTapGesture()
                         .onEnded { value in
-                            viewStore.send(
-                                ChartFeature.Action.spatialTapGestureEnded(location: value.location,
-                                                                           chartProxy: proxy,
-                                                                           geoProxy: geo)
-                            )
+                            selectedPoint = self.findElement(in: points, location: value.location, chartProxy: proxy, geo: geo)
                         }
                         .exclusively(
                             before: DragGesture()
                                 .onChanged { value in
-                                    viewStore.send(
-                                        ChartFeature.Action.dragGestureChanged(location: value.location,
-                                                                               chartProxy: proxy,
-                                                                               geoProxy: geo)
-                                    )
+                                    selectedPoint = self.findElement(in: points, location: value.location, chartProxy: proxy, geo: geo)
                                 }
                         )
                 )
@@ -120,6 +113,22 @@ public struct ChartView: View {
         .foregroundStyle(chartColor)
         .interpolationMethod(isSmooth ? .cardinal : .linear)
         .symbolSize(showSymbols ? 60 : 0)
+    }
+
+    private func findElement(in points: [Point],
+                             location: CGPoint,
+                             chartProxy: ChartProxy,
+                             geo: GeometryProxy) -> Point? {
+        let relativeXPosition = location.x - geo[chartProxy.plotAreaFrame].origin.x
+        if let xPointValue = chartProxy.value(atX: relativeXPosition) as Double? {
+            return closestPoint(to: xPointValue, in: points)
+        }
+        return nil
+    }
+
+    private func closestPoint(to xValue: Double, in points: [Point]) -> Point? {
+        guard !points.isEmpty else { return nil }
+        return points.min(by: { abs($0.x - xValue) < abs($1.x - xValue) })
     }
 }
 

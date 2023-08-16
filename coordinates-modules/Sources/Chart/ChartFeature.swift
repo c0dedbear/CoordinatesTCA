@@ -14,7 +14,6 @@ public struct ChartFeature: Reducer {
     public init() {}
 
     public struct State: Equatable {
-        var selectedElement: Point?
         var points: [Point]
 
         @BindingState var isDotsShown = true
@@ -23,8 +22,7 @@ public struct ChartFeature: Reducer {
         @BindingState var needScaleYAxis = false
         @BindingState var chatRenderURL: URL?
 
-        public init(selectedElement: Point? = nil, points: [Point] = []) {
-            self.selectedElement = selectedElement
+        public init(points: [Point] = []) {
             self.points = points
         }
 
@@ -49,12 +47,6 @@ public struct ChartFeature: Reducer {
         case shareButtonTapped(content: any View)
         case activityViewDismissed
         case pdfRendered(at: URL)
-        case spatialTapGestureEnded(location: CGPoint,
-                                    chartProxy: ChartProxy,
-                                    geoProxy: GeometryProxy)
-        case dragGestureChanged(location: CGPoint,
-                                chartProxy: ChartProxy,
-                                geoProxy: GeometryProxy)
     }
 
     public var body: some ReducerOf<Self> {
@@ -73,13 +65,6 @@ public struct ChartFeature: Reducer {
                 state.chatRenderURL = url
             case .doneButtonTapped:
                 return .run { _ in await self.dismiss() }
-            case let .spatialTapGestureEnded(location, chartProxy, geoProxy):
-                let element = self.findElement(in: state.points, location: location, chartProxy: chartProxy, geometry: geoProxy)
-                let newPoint = (state.selectedElement?.x == element?.x) ? nil : element
-                state.selectedElement = newPoint
-            case let .dragGestureChanged(location, chartProxy, geoProxy):
-                let newPoint = self.findElement(in: state.points, location: location, chartProxy: chartProxy, geometry: geoProxy)
-                state.selectedElement = newPoint
             }
             return .none
         }
@@ -88,26 +73,11 @@ public struct ChartFeature: Reducer {
 }
 
 private extension ChartFeature {
-    func findElement(in points: [Point],
-                     location: CGPoint,
-                     chartProxy: ChartProxy,
-                     geometry: GeometryProxy) -> Point? {
-        let relativeXPosition = location.x - geometry[chartProxy.plotAreaFrame].origin.x
-        if let xPointValue = chartProxy.value(atX: relativeXPosition) as Double? {
-            return closestPoint(to: xPointValue, in: points)
-        }
-        return nil
-    }
-
-    func closestPoint(to xValue: Double, in points: [Point]) -> Point? {
-        guard !points.isEmpty else { return nil }
-        return points.min(by: { abs($0.x - xValue) < abs($1.x - xValue) })
-    }
-
-    func renderAndExportPDF(content: some View) async -> URL {
+    @MainActor
+    func renderAndExportPDF(content: some View) -> URL {
         let fileUrl = URL.documentsDirectory.appending(path: "chart.pdf")
 
-        await ImageRenderer(content: content).render { size, renderInContext in
+        ImageRenderer(content: content).render { size, renderInContext in
             let translation: CGAffineTransform = .init(translationX: -size.width / 4, y: -size.height / 4)
             var box = CGRect(origin: .zero, size: .init(width: size.width * 1.5, height: size.height * 1.5)).applying(translation)
 

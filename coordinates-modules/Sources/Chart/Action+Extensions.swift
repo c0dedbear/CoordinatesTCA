@@ -17,9 +17,6 @@ extension ChartFeature.Action: Identifiable {
             return "binding"
         case .doneButtonTapped:
             return "doneButtonTapped"
-        case let .dragGestureChanged(location, chartProxy, geoProxy),
-            let .spatialTapGestureEnded(location, chartProxy, geoProxy):
-            return "\(location), \(chartProxy), \(geoProxy)"
         }
     }
 }
