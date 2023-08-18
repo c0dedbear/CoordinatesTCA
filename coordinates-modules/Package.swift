@@ -68,9 +68,6 @@ let package = Package(
             ]),
         .target(
             name: "APIClientLive",
-            dependencies: ["APIClient"]),
-        .testTarget(
-            name: "APIClientTests",
             dependencies: ["APIClient"])
     ]
 )
